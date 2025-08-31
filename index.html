@@ -2,83 +2,184 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Mercedes Meadows | Show up & Commit</title>
+  <title>Mercedes Meadows | Show up & Commit.</title>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
   <style>
+    :root {
+      --sage: #c5d7c0;
+      --sand: #a68c6d;
+      --warm-white: #fdfaf6;
+      --honeycomb: #f1e3d3;
+      --text-dark: #333;
+    }
+
     body {
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #fdfaf6; /* warm white */
-      color: #333;
       margin: 0;
-      padding: 0;
+      font-family: 'Quicksand', sans-serif;
+      background-color: var(--warm-white);
+      color: var(--text-dark);
+      scroll-behavior: smooth;
     }
+
     header {
-      background-color: #d8e3dc; /* sage */
-      padding: 2rem;
+      background-color: var(--sage);
+      padding: 3rem 1rem;
       text-align: center;
+      border-bottom: 8px solid var(--honeycomb);
     }
+
     h1 {
       margin: 0;
-      font-size: 2.5rem;
+      font-size: 2.8rem;
+      font-weight: 600;
     }
+
     .tagline {
+      font-size: 1.2rem;
       font-style: italic;
-      color: #a68c6d; /* warm sand */
+      color: var(--sand);
+      margin-top: 0.5rem;
     }
+
+    .nav {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      margin: 2rem 0;
+      flex-wrap: wrap;
+    }
+
+    .hex-button {
+      width: 100px;
+      height: 55px;
+      background-color: var(--honeycomb);
+      clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      font-weight: bold;
+      color: var(--text-dark);
+      text-decoration: none;
+      transition: transform 0.3s ease;
+    }
+
+    .hex-button:hover {
+      transform: scale(1.05);
+      background-color: var(--sand);
+      color: white;
+    }
+
     section {
-      padding: 2rem;
+      padding: 2rem 1.5rem;
+      max-width: 800px;
+      margin: auto;
     }
-    .skills, .software, .certs, .contact {
-      margin-bottom: 2rem;
+
+    h2 {
+      color: var(--sand);
+      border-bottom: 2px solid var(--honeycomb);
+      padding-bottom: 0.3rem;
     }
+
+    .reviews {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      justify-content: center;
+      margin-top: 2rem;
+    }
+
+    .review {
+      width: 180px;
+      height: 160px;
+      background-color: var(--sage);
+      clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+      padding: 1rem;
+      font-size: 0.9rem;
+      opacity: 0;
+      transform: translateY(30px);
+      animation: slideIn 1s forwards;
+    }
+
+    .review:nth-child(1) { animation-delay: 0.3s; }
+    .review:nth-child(2) { animation-delay: 0.6s; }
+    .review:nth-child(3) { animation-delay: 0.9s; }
+
+    @keyframes slideIn {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
     footer {
-      background-color: #f1e3d3; /* honeycomb accent */
+      background-color: var(--honeycomb);
       text-align: center;
       padding: 1rem;
       font-size: 0.9rem;
+      margin-top: 2rem;
+    }
+
+    a {
+      color: var(--sand);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
     }
   </style>
 </head>
 <body>
   <header>
     <h1>Mercedes Meadows</h1>
-    <p class="tagline">Show up & Commit</p>
-    <p>Empathy-driven tech support for enterprises and remote teams.</p>
+    <p class="tagline">Show up & Commit.</p>
+    <p>Empathy-driven tech support for enterprises and modern teams.</p>
   </header>
 
-  <section class="skills">
-    <h2>Skills</h2>
-    <ul>
-      <li>Technical Troubleshooting</li>
-      <li>Client Success Management</li>
-    </ul>
+  <div class="nav">
+    <a href="#about" class="hex-button">About Me</a>
+    <a href="#certs" class="hex-button">Certifications</a>
+    <a href="#projects" class="hex-button">Projects</a>
+    <a href="#next" class="hex-button">What's Next?</a>
+  </div>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <p>I’m a Help Desk Technician blending technical troubleshooting with client success leadership. I specialize in Microsoft 365, ServiceNow, and process optimization—driven by empathy, structure, and impact.</p>
   </section>
 
-  <section class="software">
-    <h2>Software and Tools</h2>
-    <ul>
-      <li>Microsoft 365 / Exchange Online Administration</li>
-      <li>ServiceNow</li>
-      <li>Identity and Access Managment tools</li>
-    </ul>
-  </section>
-
-  <section class="certs">
+  <section id="certs">
     <h2>Certifications</h2>
     <ul>
-      <li>CompTIA A+ & Network+</li>
-      <li>LPI Linux Essentials</li>
+      <li>CompTIA A+, Network+, LPI Linux Essentials</li>
+      <li>Microsoft 365 Admin & Exchange Online</li>
       <li>Google Project Management</li>
     </ul>
   </section>
 
-  <section class="contact">
-    <h2>Let’s Forge Connections Together</h2>
-    <p>Email: mercedestmeadows@gmail.com</p>
-    <p>LinkedIn: <a href="https://linkedin.com/in/mercedesmeadows">linkedin.com/in/mercedesmeadows</a></p>
+  <section id="projects">
+    <h2>Projects</h2>
+    <p>Coming soon: A showcase of technical wins, client success stories, and process improvements across Georgia Tech and Lowe’s.</p>
+  </section>
+
+  <section id="next">
+    <h2>What's Next?</h2>
+    <p>Seeking full-time remote/hybrid tech roles that blend support and strategy proactively.</p>
+  </section>
+
+  <section>
+    <h2>Recent Client Reviews</h2>
+    <div class="reviews">
+      <div class="review">“She was amazing and so sweet! She fixed it for me so quick!”</div>
+      <div class="review">“Very timely support and accommodating the difference in time zone. Really appreciated.”</div>
+      <div class="review">“Mercedes was amazing helping me fix my connection issue thank you!”</div>
+    </div>
   </section>
 
   <footer>
-    &copy; 2025 Mercedes Meadows. Built with empathy.
+    &copy; 2025 Mercedes Meadows. Built with empathy and intention.
   </footer>
 </body>
 </html>
