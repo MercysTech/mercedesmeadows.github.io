@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Page Title | Mercedes Meadows</title>
+  <title>Certifications | Mercedes Meadows</title>
   <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
  <style>
   :root {
@@ -21,53 +21,26 @@
     display: flex;
     min-height: 100vh;
     overflow-x: hidden;
-    position: relative;
   }
 
   .border {
     width: 10%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: transparent;
+    background-repeat: repeat-y;
+    background-size: cover;
+    background-position: center;
   }
-
-  .border svg {
-    width: 100%;
-    height: 100%;
-  }
-
-  .hex-group polygon {
-    fill: var(--sage);
-    opacity: 0.3;
-    stroke: var(--honeycomb);
-    stroke-width: 1;
-    animation: pulse 6s infinite ease-in-out;
-  }
-
-  @keyframes pulse {
-    0%, 100% { opacity: 0.3; transform: scale(1); }
-    50% { opacity: 0.5; transform: scale(1.05); }
-  }
+  .border.left {
+   background-image: url('left-border.png.png');
+    }
+   
+    .border.right {
+      background-image: url('right-border.png.png');
+    }
 
   .content {
     width: 80%;
     padding: 2rem;
-    position: relative;
-    z-index: 1;
-  }
-
-  .watermark {
-    position: absolute;
-    top: 20%;
-    left: 50%;
-    transform: translateX(-50%);
-    font-size: 10rem;
-    font-family: serif;
-    color: var(--honeycomb);
-    opacity: 0.1;
-    z-index: 0;
-    pointer-events: none;
+    background-color: var(--warm-white);
   }
 
   h1 {
@@ -77,8 +50,6 @@
     padding-bottom: 0.5rem;
     margin-bottom: 1.5rem;
     text-align: center;
-    position: relative;
-    z-index: 2;
   }
 
   p, ul {
@@ -86,8 +57,6 @@
     line-height: 1.6;
     max-width: 800px;
     margin: auto;
-    position: relative;
-    z-index: 2;
   }
 
   ul {
@@ -101,8 +70,6 @@
     font-weight: bold;
     color: var(--sand);
     text-decoration: none;
-    position: relative;
-    z-index: 2;
   }
 
   a:hover {
@@ -114,27 +81,13 @@
     text-align: center;
     font-size: 0.9rem;
     color: var(--sand);
-    position: relative;
-    z-index: 2;
   }
 </style>
 </head>
 <body>
-  <div class="border left">
-    <svg viewBox="0 0 100 600" preserveAspectRatio="xMidYMid meet">
-      <g class="hex-group">
-        <polygon points="50,0 75,25 75,55 50,80 25,55 25,25" />
-        <polygon points="50,100 75,125 75,155 50,180 25,155 25,125" />
-        <polygon points="50,200 75,225 75,255 50,280 25,255 25,225" />
-        <polygon points="50,300 75,325 75,355 50,380 25,355 25,325" />
-        <polygon points="50,400 75,425 75,455 50,480 25,455 25,425" />
-        <polygon points="50,500 75,525 75,555 50,580 25,555 25,525" />
-      </g>
-    </svg>
-  </div>
+  <div class="border left"></div>
 
   <div class="content">
-    <div class="watermark">MM</div>
     <h1>Certifications</h1>
     <ul>
       <li>CompTIA A+, Network+, Linux Essentials</li>
@@ -146,16 +99,5 @@
   </div>
 
   <div class="border right">
-    <svg viewBox="0 0 100 600" preserveAspectRatio="xMidYMid meet">
-      <g class="hex-group">
-        <polygon points="50,0 75,25 75,55 50,80 25,55 25,25" />
-        <polygon points="50,100 75,125 75,155 50,180 25,155 25,125" />
-        <polygon points="50,200 75,225 75,255 50,280 25,255 25,225" />
-        <polygon points="50,300 75,325 75,355 50,380 25,355 25,325" />
-        <polygon points="50,400 75,425 75,455 50,480 25,455 25,425" />
-        <polygon points="50,500 75,525 75,555 50,580 25,555 25,525" />
-      </g>
-    </svg>
-  </div>
 </body>
 </html>
