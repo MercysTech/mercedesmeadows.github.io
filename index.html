@@ -101,43 +101,42 @@
       padding-left: 1.2rem;
     }
 
-    .reviews {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1rem;
-      justify-content: center;
-      margin-top: 2rem;
-    }
+   .reviews {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+}
 
-    .review {
-      width: 200px;
-      height: 180px;
-      background-color: var(--sage);
-      clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
-      padding: 1rem;
-      font-size: 0.9rem;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      opacity: 0;
-      transform: translateY(30px);
-      animation: slideIn 1s forwards;
-    }
+.review {
+  width: 200px;
+  height: 180px;
+  background-color: var(--sage);
+  clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+  padding: 1rem;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: slideIn 1s forwards;
+}
 
-    .review:nth-child(1) { animation-delay: 0.3s; }
-    .review:nth-child(2) { animation-delay: 0.6s; }
-    .review:nth-child(3) { animation-delay: 0.9s; }
-    .review:nth-child(4) { animation-delay: 0.12s; }
-    .review:nth-child(5) { animation-delay: 0.15s; }
+.review:nth-child(1) { animation-delay: 0.3s; }
+.review:nth-child(2) { animation-delay: 0.6s; }
+.review:nth-child(3) { animation-delay: 0.9s; }
+.review:nth-child(4) { animation-delay: 0.6s; }
+.review:nth-child(5) { animation-delay: 0.3s; }
 
-    @keyframes slideIn {
-      to {
-        opacity: 5;
-        transform: translateY(0);
-      }
-    }
-
+@keyframes slideIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
     footer {
       background-color: var(--honeycomb);
       text-align: center;
@@ -174,15 +173,15 @@
   </section>
 
   <section>
-    <h2>Recent Client Reviews</h2>
-    <div class="reviews">
-      <div class="review">"Very timely support and accommodating the difference in time zone. Really appreciated."
-      <div class="review">“She was amazing and so sweet! She fixed it for me so quick!”</div>
-      <div class="review">“Very kind, helpful, and responsive!”</div>
-      <div class="review">“Mercedes was amazing helping me fix my connection issue thank you!”</div>
-      <div class="review">“Mercedes was very kind and helpful. She quickly understood my issue and helped fixed it quickly.”</div>
-    </div>
-  </section>
+  <h2>Recent Client Reviews</h2>
+  <div class="reviews">
+    <div class="review">“Very timely support and accommodating the difference in time zone. Really appreciated.”</div>
+    <div class="review">“She was amazing and so sweet! She fixed it for me so quick!”</div>
+    <div class="review">“Very kind, helpful, and responsive!”</div>
+    <div class="review">“Mercedes was amazing helping me fix my connection issue thank you!”</div>
+    <div class="review">“Mercedes was very kind and helpful. She quickly understood my issue and helped fix it quickly.”</div>
+  </div>
+</section>
 
   <footer>
     &copy; 2025 Mercedes Meadows. Built with empathy and intention.
