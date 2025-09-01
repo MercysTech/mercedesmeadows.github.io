@@ -175,6 +175,29 @@
       font-size: 0.9rem;
       margin-top: 2rem;
     }
+    .split {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  align-items: flex-start;
+}
+
+.split img {
+  max-width: 300px;
+  border-radius: 8px;
+}
+
+.values, .skills {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 1rem;
+}
+
+.values li, .skills li {
+  margin-bottom: 0.5rem;
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
   </style>
 </head>
 <body>
@@ -240,16 +263,30 @@
   </section>
 
   <section id="meet">
-    <h2>Meet Mercedes</h2>
-    <div class="split">
-      <img src="mercedes-profile.jpg" alt="Mercedes Meadows">
-      <div>
-        <p>I document everything, troubleshoot with empathy, and optimize workflows like it’s second nature.</p>
-        <p>I thrive in environments that value structure, inclusivity, and continuous improvement.</p>
-        <p>My journey is built on clarity, warmth, and impact—just like my work.</p>
-      </div>
+  <h2>Meet Mercedes</h2>
+  <div class="split">
+    <img src="mercedes-photo.png" alt="Mercedes Meadows">
+    <div>
+      <p><strong>Values I live by:</strong></p>
+      <ul class="values">
+        <li>🧭 Integrity – I lead with honesty and accountability</li>
+        <li>📚 Continuous Learning – I’m always evolving through certifications and hands-on growth</li>
+        <li>🧠 Leadership – I guide teams with empathy and structure</li>
+        <li>💬 Communication – I make complex issues clear and actionable</li>
+        <li>❤️ Empathy – I support clients and colleagues with care and intention</li>
+      </ul>
+
+      <p><strong>Personal skills that shape my work:</strong></p>
+      <ul class="skills">
+        <li>👩‍👧 Parenting – I balance priorities and lead with patience</li>
+        <li>🗣️ Communication – I connect across teams and roles</li>
+        <li>📋 Organization – I bring structure to every workflow</li>
+      </ul>
+
+      <p><strong>Outside of work:</strong> You’ll find me hiking Georgia trails, curled up with a good book, or hosting movie nights with my family. I recharge through nature, stories, and connection.</p>
     </div>
-  </section>
+  </div>
+</section>
 
   <section id="connect" class="cta">
     <h2>Let’s Forge Connections Together</h2>
