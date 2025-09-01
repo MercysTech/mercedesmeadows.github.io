@@ -10,6 +10,28 @@
       font-family: 'Quicksand', sans-serif;
       background-color: #fdfaf6;
       color: #333;
+      display: flex;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    .border {
+      width: 10%;
+      background-repeat: repeat-y;
+      background-size: cover;
+      background-position: center;
+    }
+
+    .border.left {
+      background-image: url('left-border.png.png');
+    }
+
+    .border.right {
+      background-image: url('right-border.png.png');
+    }
+
+    .main-content {
+      width: 80%;
       padding: 2rem;
     }
 
@@ -52,9 +74,15 @@
   </style>
 </head>
 <body>
-  <h1>The Session Layer</h1>
-  <p>Welcome to my podcast and blog space where empathy meets infrastructure. Here, I share stories, insights, and interviews that explore the human side of tech support, leadership, and career growth.</p>
-  <a href="index.html">← Back to Home</a>
-  <footer>&copy; 2025 Mercedes Meadows. Built with empathy and intention.</footer>
+  <div class="border left"></div>
+
+  <div class="main-content">
+    <h1>The Session Layer</h1>
+    <p>Welcome to my podcast and blog space where empathy meets infrastructure. Here, I share stories, insights, and interviews that explore the human side of tech support, leadership, and career growth.</p>
+    <a href="index.html">← Back to Home</a>
+    <footer>&copy; 2025 Mercedes Meadows. Built with empathy and intention.</footer>
+  </div>
+
+  <div class="border right"></div>
 </body>
 </html>
