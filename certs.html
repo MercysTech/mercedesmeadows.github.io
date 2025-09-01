@@ -1,104 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Page Title | Mercedes Meadows</title>
-  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
- <style>
-  :root {
-    --warm-white: #fdfaf6;
-    --sand: #a68c6d;
-    --text-dark: #333;
-  }
+  <meta charset="UTF-8">
+  <title>Page Title | Mercedes Meadows</title>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --warm-white: #fdfaf6;
+      --sand: #a68c6d;
+      --text-dark: #333;
+    }
 
-  body {
-    margin: 0;
-    font-family: 'Quicksand', sans-serif;
-    background-color: var(--warm-white);
-    color: var(--text-dark);
-    display: flex;
-    min-height: 100vh;
-    overflow-x: hidden;
-  }
+    body {
+      margin: 0;
+      font-family: 'Quicksand', sans-serif;
+      background-color: var(--warm-white);
+      color: var(--text-dark);
+      display: flex;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
 
-  .border {
-    width: 10%;
-    background-repeat: repeat-y;
-    background-size: cover;
-    background-position: center;
-  }
+    .border {
+      width: 10%;
+      background-repeat: repeat-y;
+      background-size: contain; 
+      background-position: center;
+    }
 
-  .border.left {
-    background-image: url('left-border.png'); /* Replace with your actual file name */
-  }
+    .border.left {
+      background-image: url('left-border.png');
+    }
 
-  .border.right {
-    background-image: url('right-border.png'); /* Replace with your actual file name */
-  }
+    .border.right {
+      background-image: url('right-border.png');
+    }
 
-  .content {
-    width: 80%;
-    padding: 2rem;
-    background-color: var(--warm-white);
-  }
+    .content {
+      width: 80%;
+      padding: 2rem;
+      background-color: var(--warm-white);
+      /* This flex-grow rule ensures the content takes up the available space */
+      flex-grow: 1; 
+      /* Adding this to make sure the content fills the full height between the borders */
+      display: flex;
+      flex-direction: column;
+    }
 
-  h1 {
-    color: var(--sand);
-    font-size: 2.5rem;
-    border-bottom: 4px solid #f1e3d3;
-    padding-bottom: 0.5rem;
-    margin-bottom: 1.5rem;
-    text-align: center;
-  }
+    h1 {
+      color: var(--sand);
+      font-size: 2.5rem;
+      border-bottom: 4px solid #f1e3d3;
+      padding-bottom: 0.5rem;
+      margin-bottom: 1.5rem;
+      text-align: center;
+    }
 
-  p, ul {
-    font-size: 1rem;
-    line-height: 1.6;
-    max-width: 800px;
-    margin: auto;
-  }
+    p, ul {
+      font-size: 1rem;
+      line-height: 1.6;
+      max-width: 800px;
+      margin: auto;
+    }
 
-  a {
-    display: block;
-    text-align: center;
-    margin-top: 2rem;
-    font-weight: bold;
-    color: var(--sand);
-    text-decoration: none;
-  }
+    a {
+      display: block;
+      text-align: center;
+      margin-top: 2rem;
+      font-weight: bold;
+      color: var(--sand);
+      text-decoration: none;
+    }
 
-  a:hover {
-    text-decoration: underline;
-  }
+    a:hover {
+      text-decoration: underline;
+    }
 
-  footer {
-    margin-top: 3rem;
-    text-align: center;
-    font-size: 0.9rem;
-    color: var(--sand);
-  }
-</style>
+    footer {
+      margin-top: auto; /* Pushes the footer to the bottom */
+      text-align: center;
+      font-size: 0.9rem;
+      color: var(--sand);
+    }
+  </style>
 </head>
 <body>
-  <div class="border left"></div>
-  <div class="content">
-    <left-border.png.png>
-  </div>
-
-  <div class="content">
-    <h1>Certifications</h1>
-    <ul>
-      <li>CompTIA A+, Network+, Linux Essentials</li>
-      <li>Microsoft 365 Admin & Exchange Online</li>
-      <li>Google Project Management Certificate</li>
-    </ul>
-    <a href="index.html">← Back to Who's Mercedes?</a>
-    <footer>&copy; 2025 Mercedes Meadows. Built with empathy and intention.</footer>
-  </div>
-
-  <div class="border right"></div>
-  <div class="content">
-    <right-border.png.png>
-  </div>
+  <div class="border left"></div>
+  <div class="content">
+    <h1>Certifications</h1>
+    <ul>
+      <li>CompTIA A+, Network+, Linux Essentials</li>
+      <li>Microsoft 365 Admin & Exchange Online</li>
+      <li>Google Project Management Certificate</li>
+    </ul>
+    <a href="index.html">← Back to Who's Mercedes?</a>
+    <footer>&copy; 2025 Mercedes Meadows. Built with empathy and intention.</footer>
+  </div>
+  <div class="border right"></div>
 </body>
 </html>
