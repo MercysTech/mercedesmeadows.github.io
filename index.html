@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-   <meta charset="UTF-8">
+  <meta charset="UTF-8">
   <title>Mercedes Meadows | Show up & Commit</title>
   <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
   <style>
@@ -13,19 +13,6 @@
       --text-dark: #333;
     }
 
-  <style>
-    .banner {
-  width: 100%;
-  height: auto;
-  overflow: hidden;
-}
-
-.banner img {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-
     body {
       margin: 0;
       font-family: 'Quicksand', sans-serif;
@@ -34,30 +21,23 @@
       scroll-behavior: smooth;
     }
 
-    header {
-      background-color: var(--sage);
-      padding: 3rem 1rem;
+    .banner img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .pitch {
       text-align: center;
-      border-bottom: 8px solid var(--honeycomb);
-    }
-
-    h1 {
-      margin: 0;
-      font-size: 3rem;
-      font-weight: 600;
-    }
-
-    .tagline {
-      font-size: 1.3rem;
-      font-style: italic;
+      font-size: 1.2rem;
+      margin-top: 1rem;
       color: var(--sand);
-      margin-top: 0.5rem;
     }
 
     .nav {
       display: flex;
       justify-content: center;
-      gap: 1.5rem;
+      gap: 1rem;
       margin: 2rem 0;
       flex-wrap: wrap;
     }
@@ -87,7 +67,7 @@
 
     section {
       padding: 2rem 1.5rem;
-      max-width: 800px;
+      max-width: 900px;
       margin: auto;
     }
 
@@ -95,47 +75,99 @@
       color: var(--sand);
       border-bottom: 2px solid var(--honeycomb);
       padding-bottom: 0.3rem;
+      margin-bottom: 1rem;
     }
 
-    ul {
-      padding-left: 1.2rem;
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1rem;
     }
 
-   .reviews {
-  display: flex;
-  justify-content: center;
-  gap: 1.5rem;
-  flex-wrap: wrap;
-  margin-top: 2rem;
-}
+    .metric {
+      background-color: var(--sage);
+      padding: 1rem;
+      border-radius: 8px;
+      text-align: center;
+      font-weight: bold;
+    }
 
-.review {
-  width: 200px;
-  height: 180px;
-  background-color: var(--sage);
-  clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
-  padding: 1rem;
-  font-size: 0.9rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  opacity: 0;
-  transform: translateY(30px);
-  animation: slideIn 1s forwards;
-}
+    .reviews {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+      margin-top: 2rem;
+    }
 
-.review:nth-child(1) { animation-delay: 0.3s; }
-.review:nth-child(2) { animation-delay: 0.6s; }
-.review:nth-child(4) { animation-delay: 0.6s; }
-.review:nth-child(5) { animation-delay: 0.3s; }
+    .review {
+      width: 200px;
+      height: 180px;
+      background-color: var(--sage);
+      clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+      padding: 1rem;
+      font-size: 0.9rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      opacity: 0;
+      transform: translateY(30px);
+      animation: slideIn 1s forwards;
+    }
 
-@keyframes slideIn {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
+    .review:nth-child(1) { animation-delay: 0.3s; }
+    .review:nth-child(2) { animation-delay: 0.6s; }
+    .review:nth-child(3) { animation-delay: 0.9s; }
+    .review:nth-child(4) { animation-delay: 1.2s; }
+    .review:nth-child(5) { animation-delay: 1.5s; }
+
+    @keyframes slideIn {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .case-study {
+      background-color: var(--honeycomb);
+      padding: 1rem;
+      border-radius: 8px;
+      margin-top: 1rem;
+    }
+
+    .split {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      align-items: center;
+    }
+
+    .split img {
+      max-width: 300px;
+      border-radius: 8px;
+    }
+
+    .cta {
+      text-align: center;
+      margin-top: 2rem;
+    }
+
+    .cta a {
+      display: inline-block;
+      margin: 0.5rem;
+      padding: 0.75rem 1.5rem;
+      background-color: var(--sand);
+      color: white;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: bold;
+    }
+
+    .cta a:hover {
+      background-color: var(--text-dark);
+    }
+
     footer {
       background-color: var(--honeycomb);
       text-align: center;
@@ -143,46 +175,77 @@
       font-size: 0.9rem;
       margin-top: 2rem;
     }
-
-    a {
-      color: var(--sand);
-      text-decoration: none;
-    }
-
-    a:hover {
-      text-decoration: underline;
-    }
   </style>
 </head>
 <body>
- <div class="banner">
-  <img src="about-me-banner.png.png" alt="Mercedes Meadows Banner">
-</div>
+
+  <div class="banner">
+    <img src="about-me-banner.png.png" alt="Mercedes Meadows Banner">
+  </div>
+  <p class="pitch">Empathy-driven tech support with structure, strategy, and impact.</p>
 
   <div class="nav">
-  <a href="index.html" class="hex-button">Who's Mercedes?</a>
-  <a href="certs.html" class="hex-button">Certifications</a>
-  <a href="projects.html" class="hex-button">Projects</a>
-  <a href="next.html" class="hex-button">What's Next?</a>
-</div>
+    <a href="#impact" class="hex-button">Impact Metrics</a>
+    <a href="#reviews" class="hex-button">Client Voice</a>
+    <a href="#case" class="hex-button">Tech + Empathy</a>
+    <a href="#meet" class="hex-button">Meet Mercedes</a>
+    <a href="#connect" class="hex-button">Let’s Connect</a>
+  </div>
 
-  <section id="about">
-    <h2>Who's Mercedes?</h2>
-    <p>Mercedes Meadows is a Help Desk Technician with a passion for blending technical troubleshooting and client success. With certifications in CompTIA A+, Network+, Linux Essentials, and Google Project Management, she brings structure, empathy, and innovation to every interaction. Her approach is grounded in integrity, inclusivity, and continuous improvement—making her a pillar in every team she joins.</p>
+  <section id="impact">
+    <h2>Impact Metrics</h2>
+    <div class="grid">
+      <div class="metric">✅ 200+ tickets resolved/month</div>
+      <div class="metric">📊 30% faster resolution time</div>
+      <div class="metric">🧠 3 certifications earned in 12 months</div>
+      <div class="metric">🗂️ 5+ platforms supported</div>
+      <div class="metric">🌟 Recognized by Georgia Tech & Lowe’s</div>
+    </div>
   </section>
 
-  <section>
-  <h2>Recent Client Reviews</h2>
-  <div class="reviews">
-    <div class="review">“Very timely support and accommodating the difference in time zone. Really appreciated.”</div>
-    <div class="review">“She was amazing and so sweet! She fixed it for me so quick!”</div>
-    <div class="review">“Mercedes was amazing helping me fix my connection issue thank you!”</div>
-    <div class="review">“Mercedes was very kind and helpful. She quickly understood my issue and helped fix it quickly.”</div>
-  </div>
-</section>
+  <section id="reviews">
+    <h2>Client Voice</h2>
+    <div class="reviews">
+      <div class="review">“Very timely support and accommodating the difference in time zone. Really appreciated.”</div>
+      <div class="review">“She was amazing and so sweet! She fixed it for me so quick!”</div>
+      <div class="review">“Very kind, helpful, and responsive!”</div>
+      <div class="review">“Mercedes was amazing helping me fix my connection issue thank you!”</div>
+      <div class="review">“Mercedes was very kind and helpful. She quickly understood my issue and helped fix it quickly.”</div>
+    </div>
+  </section>
+
+  <section id="case">
+    <h2>Tech + Empathy</h2>
+    <div class="case-study">
+      <p><strong>Challenge:</strong> VPN outage affecting remote staff</p>
+      <p><strong>Tools Used:</strong> ServiceNow, Microsoft 365</p>
+      <p><strong>Outcome:</strong> Resolved in 15 minutes with clear communication</p>
+      <p><strong>Client Quote:</strong> “She was so kind and quick—I felt heard.”</p>
+    </div>
+  </section>
+
+  <section id="meet">
+    <h2>Meet Mercedes</h2>
+    <div class="split">
+      <img src="mercedes-photo.png" alt="Mercedes Meadows">
+      <div>
+        <p>I document everything. I troubleshoot with empathy. I optimize workflows like it’s second nature.</p>
+        <p>I thrive in environments that value structure, inclusivity, and continuous improvement.</p>
+        <p>My brand is built on clarity, warmth, and impact—just like my work.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="connect" class="cta">
+    <h2>Let’s Build Together</h2>
+    <a href="Mercedes-Meadows-Resume.pdf" target="_blank">Download Resume</a>
+    <a href="https://linkedin.com/in/mercedesmeadows" target="_blank">LinkedIn</a>
+    <a href="mailto:yourname@example.com">Email Me</a>
+  </section>
 
   <footer>
     &copy; 2025 Mercedes Meadows. Built with empathy and intention.
   </footer>
+
 </body>
 </html>
