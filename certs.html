@@ -11,6 +11,9 @@
       --warm-white: #fdfaf6;
       --honeycomb: #f1e3d3;
       --text-dark: #333;
+      --hex-light: rgba(241, 227, 211, 0.3);
+      --hex-mid: rgba(166, 140, 109, 0.2);
+      --hex-dark: rgba(197, 215, 192, 0.15);
     }
 
     body {
@@ -19,6 +22,27 @@
       background-color: var(--warm-white);
       color: var(--text-dark);
       padding: 2rem;
+      position: relative;
+      overflow-x: hidden;
+    }
+
+    body::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 200%;
+      height: 200%;
+      background-image:
+        radial-gradient(var(--hex-light) 20%, transparent 21%),
+        radial-gradient(var(--hex-mid) 20%, transparent 21%),
+        radial-gradient(var(--hex-dark) 20%, transparent 21%);
+      background-size: 60px 104px;
+      background-position:
+        0 0,
+        30px 52px,
+        60px 0;
+      z-index: -1;
     }
 
     h1 {
