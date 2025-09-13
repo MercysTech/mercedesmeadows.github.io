@@ -1,266 +1,52 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>The Session Layer | Mercedes Meadows</title>
-  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Quicksand', sans-serif;
-      background-color: #fdfaf6;
-      color: #333;
-      display: flex;
-      min-height: 100vh;
-      overflow-x: hidden;
-    }
-
-    .border {
-      width: 10%;
-      background-repeat: repeat-y;
-      background-size: cover;
-      background-position: center;
-    }
-
-    .border.left {
-      background-image: url('left-border.png.png');
-    }
-
-    .border.right {
-      background-image: url('right-border.png.png');
-    }
-
-    .main-content {
-      width: 80%;
-      padding: 2rem;
-    }
-
-    h1 {
-      font-size: 2.5rem;
-      color: #a68c6d;
-      border-bottom: 4px solid #f1e3d3;
-      padding-bottom: 0.5rem;
-      margin-bottom: 1.5rem;
-      text-align: center;
-    }
-
-    h2 {
-      color: #a68c6d;
-      margin-top: 2rem;
-      text-align: center;
-    }
-
-    p {
-      font-size: 1rem;
-      line-height: 1.6;
-      max-width: 800px;
-      margin: auto;
-      text-align: center;
-    }
-
-    ul {
-      max-width: 800px;
-      margin: 1rem auto;
-      padding-left: 1.5rem;
-    }
-
-    a {
-      display: block;
-      text-align: center;
-      margin-top: 2rem;
-      font-weight: bold;
-      color: #a68c6d;
-      text-decoration: none;
-    }
-
-    a:hover {
-      text-decoration: underline;
-    }
-
-    footer {
-      margin-top: 3rem;
-      text-align: center;
-      font-size: 0.9rem;
-      color: #a68c6d;
-    }
-
-    .modal-grid {
-      display: flex;
-      justify-content: center;
-      gap: 1rem;
-      margin: 2rem 0;
-      flex-wrap: wrap;
-    }
-
-    .modal-trigger {
-      background-color: #c5d7c0;
-      padding: 1rem;
-      border-radius: 8px;
-      cursor: pointer;
-      font-weight: bold;
-      text-align: center;
-      width: 160px;
-      transition: background-color 0.3s ease;
-    }
-
-    .modal-trigger:hover {
-      background-color: #a68c6d;
-      color: white;
-    }
-
-    .modal {
-      display: none;
-      position: fixed;
-      z-index: 999;
-      left: 0;
-      top: 0;
-      width: 100%;
-      height: 100%;
-      overflow: auto;
-      background-color: rgba(0,0,0,0.8);
-    }
-
-    .modal-content {
-      background-color: #fdfaf6;
-      margin: 5% auto;
-      padding: 2rem;
-      border-radius: 8px;
-      width: 80%;
-      max-width: 900px;
-      position: relative;
-    }
-
-    .close {
-      color: #a68c6d;
-      position: absolute;
-      top: 1rem;
-      right: 1rem;
-      font-size: 2rem;
-      cursor: pointer;
-    }
-
-    .carousel {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .carousel-images {
-      display: flex;
-      overflow: hidden;
-      width: 600px;
-    }
-
-    .carousel-images img {
-      min-width: 100%;
-      transition: transform 0.5s ease;
-      border-radius: 6px;
-    }
-
-    .prev, .next {
-      background-color: #c5d7c0;
-      border: none;
-      font-size: 2rem;
-      cursor: pointer;
-      padding: 0.5rem 1rem;
-      border-radius: 6px;
-      margin: 0 1rem;
-    }
-  </style>
-</head>
 <body>
   <div class="border left"></div>
 
   <div class="main-content">
+    <!-- Header and blog sections -->
     <h1>The Session Layer</h1>
-    <p>Welcome to my blog space where empathy meets infrastructure. Here, I share stories, insights, and tech news that explore the human side of tech support, leadership, and career growth.</p>
+    <p>Welcome to my blog space where empathy meets infrastructure...</p>
 
-    <section id="commit-connect">
-      <h2>Commit & Connect</h2>
-      <p>This space is dedicated to the values that guide my work—integrity, empathy, and intentional communication.</p>
-      <ul>
-        <li>🧭 Leading with empathy in high-pressure support environments</li>
-        <li>💬 Building trust through clear, inclusive communication</li>
-        <li>🌱 Staying grounded while growing in fast-paced roles</li>
-      </ul>
-    </section>
-
-    <section id="workflow-wisdom">
-      <h2>Workflow & Wisdom</h2>
-      <p>From ticketing systems to onboarding flows, this section explores the tools, habits, and mindset shifts that make tech support scalable and human-centered.</p>
-      <ul>
-        <li>📋 How I document workflows for clarity and reuse</li>
-        <li>🛠️ Favorite tools for streamlining support (ServiceNow, Microsoft 365, BuzzAPI)</li>
-        <li>🔍 Lessons learned from troubleshooting across platforms</li>
-      </ul>
-    </section>
-
-    <section id="great-lock-in">
-      <h2>The Great Lock In</h2>
-      <p>A visual reflection on resilience, connection, and creativity during lockdown. Click any tile to explore the story behind each moment.</p>
-
-      <div class="modal-grid">
-        <div class="modal-trigger" data-modal="modal1">🖼️ Connection</div>
-        <div class="modal-trigger" data-modal="modal2">🖼️ Creativity</div>
-        <div class="modal-trigger" data-modal="modal3">🖼️ Routine</div>
-        <div class="modal-trigger" data-modal="modal4">🖼️ Reflection</div>
-      </div>
-
-      <!-- Modal Template (repeat with different image sets) -->
-      <div id="modal1" class="modal">
-        <div class="modal-content">
-          <span class="close">&times;</span>
-          <div class="carousel">
-            <button class="prev">&#10094;</button>
-            <div class="carousel-images">
-              <img src="lockin1-1.jpg" alt="Connection 1">
-              <img src="lockin1-2.jpg" alt="Connection 2">
-              <img src="lockin1-3.jpg" alt="Connection 3">
-              <img src="lockin1-4.jpg" alt="Connection 4">
-              <img src="lockin1-5.jpg" alt="Connection 5">
-            </div>
-            <button class="next">&#10095;</button>
-          </div>
-        </div>
-      </div>
-
-      <!-- Repeat modal2, modal3, modal4 with unique image sets -->
-    </section>
+    <section id="commit-connect">...</section>
+    <section id="workflow-wisdom">...</section>
 
     <a href="index.html">← Back to Home</a>
     <footer>&copy; 2025 Mercedes Meadows. Built with empathy and intention.</footer>
   </div>
 
+  <!-- 🔻 The Great Lock In section now lives outside main-content -->
+  <section id="great-lock-in">
+    <h2>The Great Lock In</h2>
+    <p style="text-align:center; max-width:800px; margin:auto;">
+      A visual reflection on resilience, connection, and creativity during lockdown. Click any tile to explore the story behind each moment.
+    </p>
+
+    <div class="modal-grid">
+      <div class="modal-trigger" data-modal="modal1">🖼️ Connection</div>
+      <div class="modal-trigger" data-modal="modal2">🖼️ Creativity</div>
+      <div class="modal-trigger" data-modal="modal3">🖼️ Routine</div>
+      <div class="modal-trigger" data-modal="modal4">🖼️ Reflection</div>
+    </div>
+
+    <!-- Modal 1 -->
+    <div id="modal1" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <div class="carousel">
+          <button class="prev">&#10094;</button>
+          <div class="carousel-images">
+            <img src="lockin1-1.jpg" alt="Connection 1">
+            <img src="lockin1-2.jpg" alt="Connection 2">
+            <img src="lockin1-3.jpg" alt="Connection 3">
+            <img src="lockin1-4.jpg" alt="Connection 4">
+            <img src="lockin1-5.jpg" alt="Connection 5">
+          </div>
+          <button class="next">&#10095;</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Repeat modal2–modal4 as needed -->
+  </section>
+
   <div class="border right"></div>
-
-  <script>
-    document.querySelectorAll('.modal-trigger').forEach(trigger => {
-      trigger.addEventListener('click', () => {
-        document.getElementById(trigger.dataset.modal).style.display = 'block';
-      });
-    });
-
-    document.querySelectorAll('.close').forEach(close => {
-      close.addEventListener('click', () => {
-        close.closest('.modal').style.display = 'none';
-      });
-    });
-
-    document.querySelectorAll('.carousel').forEach(carousel => {
-      let index = 0;
-      const images = carousel.querySelector('.carousel-images');
-      const total = images.children.length;
-
-      carousel.querySelector('.next').addEventListener('click', () => {
-        index = (index + 1) % total;
-        images.style.transform = `translateX(-${index * 100}%)`;
-      });
-
-      carousel.querySelector('.prev').addEventListener('click', () => {
-        index = (index - 1 + total) % total;
-        images.style.transform = `translateX(-${index * 100}%)`;
-      });
-    });
-  </script>
 </body>
-</html>
